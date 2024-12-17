@@ -1,10 +1,1 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-# coding-project-template
+The simple E-Commerce application using React and Redux where you will display a list of products with an “Add to Cart” button for each product, display the items added to the cart and allows users to remove items from the cart. All this information is going to be globally available throughout the application using Redux Toolkit.
