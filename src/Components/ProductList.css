@@ -1,29 +1,96 @@
 .product-list {
-    flex: 1;
-    padding: 0 20px;
-  }
-  
-  .product-list-title {
-    text-align: center;
-  }
-  
+  flex: 1;
+  padding: 0 20px;
+}
+
+.product-list-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Grid layout for the product list */
+.product-list-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  gap: 15px; /* Reduced spacing between cards */
+  padding: 0;
+  list-style: none;
+}
+
+.product-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 270px; /* Reduced height */
+  background-color: #fff;
+}
+
+.product-image {
+  width: 100%; /* Image will fill its container */
+  max-width: 220px; /* Maximum width */
+  height: 220px; /* Fixed height for consistent size */
+  object-fit: cover; /* Crop excess while keeping aspect ratio */
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.add-to-cart-btn {
+  margin-top: auto; /* Push button to the bottom */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
   .product-list-items {
-    list-style: none;
-    padding: 0;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
   }
-  
+
   .product-list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    height: 220px; /* Smaller height for tablets */
   }
-  
-  .add-to-cart-btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .product-list-items {
+    grid-template-columns: 1fr; /* 1 column on mobile */
   }
+
+  .product-list-item {
+    height: 200px; /* Smaller height for mobile */
+  }
+
+  .product-image {
+    max-width: 100px; /* Smaller images for mobile */
+    height: 100px;
+  }
+}
+
